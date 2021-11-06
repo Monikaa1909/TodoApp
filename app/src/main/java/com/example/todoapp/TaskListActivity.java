@@ -2,6 +2,7 @@ package com.example.todoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
@@ -9,8 +10,7 @@ public class TaskListActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        Fragment fragment = new TaskListFragment();
-        return fragment;
+        return new TaskListFragment();
     }
 
     @Override

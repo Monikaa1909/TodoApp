@@ -11,7 +11,7 @@
         android:theme="@style/Theme.TodoApp">
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            />
         <activity
             android:name=".TaskListActivity"
             android:exported="true">

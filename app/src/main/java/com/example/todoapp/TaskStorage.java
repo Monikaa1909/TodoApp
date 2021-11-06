@@ -4,9 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import lombok.Getter;
+
 public class TaskStorage {
     private static final TaskStorage taskStorage = new TaskStorage();
-    private final List<Task> tasks;
+    @Getter private final List<Task> tasks;
+
+    public Task getTask(UUID id) {
+        for (Task task:tasks) {
+            if (task.getId().equals(id)) {
+                return task;
+            }
+        }
+        return null;
+    }
 
     public static TaskStorage getInstance(){
         return taskStorage;
@@ -20,18 +31,5 @@ public class TaskStorage {
             task.setDone(i % 3 == 0);
             tasks.add(task);
         }
-    }
-
-    public List<Task> getTasks() {
-        return tasks;
-    }
-
-    public Task getTask(UUID id) {
-        for (Task task:tasks) {
-            if (task.getId() == id) {
-                return task;
-            }
-        }
-        return new Task();
     }
 }
