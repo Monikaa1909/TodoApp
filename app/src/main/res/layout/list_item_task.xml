@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/task_item_padding"
+    android:layout_height="wrap_content">
 
-    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/one_task_padding"
+        android:background="@color/dark_greyblue">
 
+        <TextView
+            style="@style/TextFieldStyleTitle"
+            android:id="@+id/task_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/task_item_padding"
+            android:background="@color/light_greyblue">
 
-<TextView
-        android:id="@+id/task_item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/TextFieldStyle"
+                android:id="@+id/task_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/task_item_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/task_item_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@drawable/ic_check_box_outline_blank" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
+
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:orientation="horizontal"-->

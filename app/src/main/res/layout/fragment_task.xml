@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/one_task_padding"
     android:orientation="vertical"
     tools:context=".TaskFragment">
 
 
     <TextView
-        style="?android:listSeparatorTextViewStyle"
+        style="@style/TextFieldStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/task_name_label"/>
+        android:text="@string/task_name_label" />
 
     <EditText
         android:id="@+id/task_name"
@@ -22,12 +22,13 @@
         android:hint="@string/task_name_hint"/>
 
     <TextView
-        style="?android:listSeparatorTextViewStyle"
+        style="@style/TextFieldStyleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/task_details_label"/>
 
     <Button
+        style="@style/TextDetailsFieldStyle"
         android:id="@+id/task_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

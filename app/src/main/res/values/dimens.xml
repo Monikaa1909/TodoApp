@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="task_item_padding">5dp</dimen>
+    <dimen name="one_task_padding">15dp</dimen>
+    <dimen name="text_field_size">15dp</dimen>
+    <dimen name="text_field_padding">5dp</dimen>
+</resources>
